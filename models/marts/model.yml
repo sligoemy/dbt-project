@@ -1,0 +1,30 @@
+version: 2
+models:
+  - name: salesdenormalizedtable
+    description: ""
+    columns:
+      - name: CustID
+        description: ""
+        tests: [not_null]
+      - name: CustomerName
+        description: ""
+        tests: [not_null]
+      - name: Point_Earned_So_Far
+        description: ""
+        tests: [not_null]
+      - name: order_item_id
+        description: ""
+        tests: [not_null, unique]
+      - name: CustID
+        description: ""
+      - name: DateofPurchase
+        description: ""
+      - name: ProductName
+        description: ""
+      - name: Quantity
+        description: ""
+      - name: Price
+        description: ""
+      - name: Total
+        description: ""
+  
