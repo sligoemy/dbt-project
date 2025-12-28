@@ -1,0 +1,68 @@
+version: 2
+models:
+  - name: stg_customers
+    description: ""
+    columns:
+      - name: customer_id
+        description: ""
+        tests: [not_null, unique]
+      - name: full_name
+        description: ""
+        tests: [not_null]
+      - name: email
+        description: ""
+        tests: [not_null]
+  
+  - name: stg_orders
+    description: ""
+    columns:
+    - name: order_id
+      description: ""
+      tests: [not_null, unique]
+    - name: customer_id
+      description: ""
+    - name: order_date
+      description: ""
+    - name: total_amount
+      description: ""
+  
+  - name: stg_orderdetails
+    description: ""
+    columns:
+    - name: order_item_id
+      description: ""
+      tests: [not_null, unique]
+    - name: order_id
+      description: ""
+    - name: product_id
+      description: ""
+    - name: quantity
+      description: ""
+    - name: line_total
+      description: ""
+    
+  - name: stg_products
+    description: ""
+    columns:
+    - name: product_id
+      description: ""
+      tests: [not_null, unique]
+    - name: product_name
+      description: ""
+    - name: category
+      description: ""
+    - name: price
+      description: ""
+  
+  - name: stg_loyaltypoint
+    description: ""
+    columns:
+    - name: customer_id
+      description: ""
+    - name: points_earned
+      description: ""
+    - name: transaction_date
+      description: ""
+    - name: source
+      description: ""
+      
