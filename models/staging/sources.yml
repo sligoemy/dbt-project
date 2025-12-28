@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: cow_jacket
+    database: rawdata
+    schema: cow_jacket
+    tables:
+      - name: CUSTOMERS
+        description: "Raw customers table."
+        columns:
+          - name: CUSTOMER_ID
+            description: "Primary key."
+            tests: [not_null, unique]
+
+      - name: ORDERS
+        description: "Raw orders table."
+        columns:
+          - name: ORDER_ID
+            description: "Primary key."
+            tests: [not_null, unique]
+          - name: CUSTOMER_ID
+            description: "FK to customers."
+        
+      - name: ORDER_ITEMS
+        description: "Raw orders table."
+        
+      - name: LOYALTY_POINTS
+        description: "Loyalty point"
+
+      - name: PRODUCTS
+        description: "products table"
